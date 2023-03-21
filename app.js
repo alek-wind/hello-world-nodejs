@@ -1,4 +1,4 @@
-process.title = example-server;
+process.title = 'example-server';
 
 var createError = require('http-errors');
 var express = require('express');

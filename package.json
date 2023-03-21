@@ -5,7 +5,7 @@
   "scripts": {
     "test": "jest",
     "start": "node ./bin/www",
-    "stop": "pkill --signal SIGINT example-server"
+    "stop": "pkill example-server"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

@@ -3,9 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "test": "jest",
-    "start": "node ./bin/www",
-    "stop": "pkill example-server"
+    "test": "jest"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

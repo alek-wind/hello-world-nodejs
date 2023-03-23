@@ -21,7 +21,7 @@ pipeline {
       steps {
         scanForIssues(
           //enabledForFailure: true, 
-          //tool: java(pattern: '*.log'), 
+          tool: codeAnalysis(), 
           //filters: [includeFile('MyFile.*.java'), excludeCategory('WHITESPACE')]
         )
       }

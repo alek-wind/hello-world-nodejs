@@ -19,11 +19,10 @@ pipeline {
     }
     stage('Audit') {
       steps {
-        scanForIssues(
-          //enabledForFailure: true, 
-          tool: codeAnalysis(), 
-          //filters: [includeFile('MyFile.*.java'), excludeCategory('WHITESPACE')]
-        )
+        sh 'npm audit --level critical'
+        if (manager.logContains('.*glob-parent before 5.1.2 .*')) {
+          error("Build failed because of this and that..")    
+        }
       }
     }
     stage('Deploy') {

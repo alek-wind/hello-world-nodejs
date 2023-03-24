@@ -21,7 +21,7 @@ pipeline {
       steps {
         sh 'npm audit --level critical'
         script {
-          if (manager.logContains('.*glob-parent before 5.1.2 .*')) {
+          if (manager.logContains('.*code execution via the.*')) {
             error("Build failed because of this and that..")    
           }
         }

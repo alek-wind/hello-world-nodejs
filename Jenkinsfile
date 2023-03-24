@@ -22,6 +22,7 @@ pipeline {
         sh 'npm audit --level critical'
         script {
           if (manager.logContains('.*code execution via the.*')) {
+            sh 'echo \'In if statement\''
             error("Build failed because of this and that..")    
           }
         }
